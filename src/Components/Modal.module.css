@@ -1,0 +1,14 @@
+.main {
+   position: absolute;
+   left: 25%;
+   top: 25%;
+   width: 50%;
+}
+
+.hide {
+   display: none;
+}
+
+.ml5 {
+   margin-left: 5%;
+}
