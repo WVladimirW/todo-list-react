@@ -10,7 +10,7 @@ function Navbar(props) {
       <nav className="nav-extended   light-blue darken-1">
          <div className="nav-content">
             <ul className="right hide-on-med-and-down">
-               <li><a onClick={showMokeTodos}>SHOW MOKE TODOS</a></li>
+               <li><a onClick={showMokeTodos}>DOWNLOAD MOKE TODOS</a></li>
                <li><a onClick={(e) => props.changeShowTodos(e)}>SHOW ALL</a></li>
                <li><a onClick={(e) => props.changeShowTodos(e)}>SHOW COMPLETED</a></li>
                <li><a onClick={(e) => props.changeShowTodos(e)}>SHOW UNCOMPLETED</a></li>

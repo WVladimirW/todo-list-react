@@ -3,18 +3,8 @@ import axios from 'axios'
 import TodoItem from "./TodoItem";
 
 function TodosList(props) {
-   const [todos, setTodos] = useState([{
-      "userId": 1,
-      "id": 1,
-      "title": "delectus aut autem",
-      "completed": false
-   },
-   {
-      "userId": 1,
-      "id": 2,
-      "title": "quis ut nam facilis et officia qui",
-      "completed": true
-   }])
+   const { todos, setTodos } = props
+
 
    const [filteredTodos, setFilteredTodos] = useState(todos)
 
@@ -45,16 +35,6 @@ function TodosList(props) {
       event.stopPropagation()
       setTodos(todos.filter((todo) => todo.id !== id))
    }
-   const editTodo = (event, id) => {
-      event.stopPropagation()
-      setTodos(todos.map((todo) => {
-         if (todo.id === id) {
-            todo.title = window.prompt('Изменить', todo.title) // изменить на красивое модальное окно
-         }
-         return todo
-      }))
-   }
-
 
    useEffect(() => {
       if (props.visibleMokeTodos) {
@@ -73,7 +53,7 @@ function TodosList(props) {
                key={todo.id}
                changeCompleted={changeIsCompleted}
                deleteTodo={deleteTodo}
-               editTodo={editTodo} />
+               editTodo={props.editTodo} />
          })
          }
       </div>

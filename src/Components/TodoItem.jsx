@@ -10,13 +10,10 @@ function TodoItem(props) {
                {props.todo.completed
                   ? <i className="Medium material-icons green-text">check</i>
                   : <i className="Medium material-icons">check_box_outline_blank</i>
-
-
                }
                <i className="material-icons red-text"
                   onClick={(event) => props.deleteTodo(event, props.todo.id)}>delete</i>
             </span>
-            <span>{props.todo.id}. </span>
             {props.todo.title}
          </a>
       </div>
