@@ -1,3 +1,15 @@
 .mt5 {
    margin-top: 5px;
 }
+
+.ml15 {
+   margin-left: 15px;
+}
+
+nav .padding {
+   padding: 0px 0;
+}
+
+.mb24 {
+   margin-bottom: 24px;
+}

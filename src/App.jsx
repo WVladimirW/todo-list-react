@@ -20,7 +20,7 @@ function App() {
     setIsVisibleMokeTodos(true)
   }
 
-  const [showTodos, setShowTodos] = useState('SHOW ALL') // SHOW COMPLETED, SHOW UNCOMPLETED, SHOW ALL
+  const [showTodos, setShowTodos] = useState('SHOW ALL')
 
   const changeShowTodos = (e) => {
     setShowTodos(e.target.innerText)
@@ -73,7 +73,8 @@ function App() {
       <Navbar
         setVisibleMokeTodos={setVisibleMokeTodos}
         changeShowTodos={changeShowTodos}
-        addShowModal={addShowModal} />
+        addShowModal={addShowModal}
+        setTodos={setTodos} />
       <TodosList
         visibleMokeTodos={isVisibleMokeTodos}
         showTodos={showTodos}
@@ -102,3 +103,4 @@ export default App;
 // При клике за пределами модального окна все отключить
 // Затемнить фон при всплытии модального окна
 // Сделать модальное окно Об авторе
+//

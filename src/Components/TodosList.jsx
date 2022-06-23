@@ -10,10 +10,10 @@ function TodosList(props) {
 
    useEffect(() => {
       switch (props.showTodos) {
-         case 'SHOW COMPLETED':
+         case 'COMPLETED':
             setFilteredTodos(todos.filter((todo) => todo.completed === true))
             break;
-         case 'SHOW UNCOMPLETED':
+         case 'UNCOMPLETED':
             setFilteredTodos(todos.filter((todo) => todo.completed !== true))
             break;
          default:
